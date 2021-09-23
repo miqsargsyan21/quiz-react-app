@@ -1,0 +1,64 @@
+body {
+  background-color: lightblue;
+
+  .App {
+    header {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    main {
+      button {
+        width: 100px;
+        margin-left: calc(50% - 50px);
+        margin-top: 50px;
+      }
+    }
+
+    #question-div {
+      display: none;
+
+      button {
+        width: 100px;
+        margin-left: calc(50% - 50px);
+        margin-top: 50px;
+      }
+
+      #btn-answer {
+        margin-top: 10px;
+      }
+
+      p, h6, form {
+        margin-left: calc(50% - 80px);
+      }
+
+      h6 {
+        margin-top: 20px;
+      }
+
+      input {
+        margin-right: 5px;
+      }
+
+      #result-div {
+        margin-top: 40px;
+        font-size: 18px;
+        font-style: oblique;
+      }
+
+      #progress-bar {
+        width: 200px;
+        height: 20px;
+        margin: 25px auto;
+        border: 1px solid lime;
+        border-radius: 10px;
+
+        #progress-state {
+          height: 20px;
+          border-radius: 10px;
+          background-color: lime;
+        }
+      }
+    }
+  }
+}
