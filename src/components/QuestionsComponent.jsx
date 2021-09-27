@@ -26,23 +26,25 @@ const QuestionsComponent = () => {
         []
     );
 
-    let handleRequest = () => {
-        const myHeaders = new Headers();
 
-        const myRequest = new Request('"http://localhost:3111/api/john-rodriguez/all-data"', {
-            method: 'GET',
-            headers: myHeaders,
-            mode: 'cors',
-            cache: 'default',
-        });
-
-        fetch(myRequest)
-            .then((r) => r.json())
-            .then((data) =>{
-                console.log(data);
-            })
-            .catch((e)=>{ console.log(e); })
-    }
+    //**** Fetched data from localHost
+    // let handleRequest = () => {
+    //     const myHeaders = new Headers();
+    //
+    //     const myRequest = new Request("api/john-rodriguez/all-data", {
+    //         method: 'GET',
+    //         headers: myHeaders,
+    //         mode: 'cors',
+    //         cache: 'default',
+    //     });
+    //
+    //     fetch(myRequest)
+    //         .then((r) => r.json())
+    //         .then((data) =>{
+    //             console.log(data);
+    //         })
+    //         .catch((e)=>{ console.log(e); })
+    // }
 
     const handleClick = () => {
         const rbs = document.querySelectorAll('input[name="chooseAnswer"]');
@@ -116,9 +118,11 @@ const QuestionsComponent = () => {
 
                          <Preloader />
                          <ResultQuiz points = {points}/>
-                         <button id="btn-answer" onClick = {handleRequest} type="button" className="btn btn-success">Do it!</button>
                      </div>
     );
+
+    //This is button for fetch my data from localHost
+    //<button id="btn-answer" onClick = {handleRequest} type="button" className="btn btn-success">Do it!</button>
 }
 
 export default QuestionsComponent
